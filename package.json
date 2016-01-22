@@ -1,0 +1,43 @@
+{
+  "name": "@fand/map-merge",
+  "description": "Map values into objects and merge them",
+  "version": "0.0.1",
+  "author": "fand",
+  "bugs": {
+    "url": "https://github.com/fand/map-merge/issues"
+  },
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "babel-eslint": "^4.1.3",
+    "eslint": "^1.5.1",
+    "espower-babel": "^3.3.0",
+    "isparta": "^3.1.0",
+    "mocha": "^2.3.3",
+    "power-assert": "^1.0.1"
+  },
+  "files": [
+    "package.json",
+    "README.md",
+    "index.js",
+    "lib"
+  ],
+  "homepage": "https://github.com/fand/map-merge",
+  "keywords": [
+    "Web Audio API",
+    "altnode"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fand/map-merge.git"
+  },
+  "scripts": {
+    "build": "babel src --out-dir lib",
+    "cover": "babel-node $(npm bin)/isparta cover --report text --report html _mocha",
+    "lint": "eslint src test",
+    "prepublish": "rm -rf lib && npm run lint && npm run test && npm run build",
+    "test": "mocha --compilers js:espower-babel/guess",
+    "travis": "npm run lint && npm run test"
+  }
+}

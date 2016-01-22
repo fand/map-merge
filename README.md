@@ -1,6 +1,6 @@
 # map-merge
 [![Build Status](http://img.shields.io/travis/fand/map-merge.svg?style=flat-square)](https://travis-ci.org/fand/map-merge)
-[![NPM Version](http://img.shields.io/npm/v/fand.map-merge.svg?style=flat-square)](https://www.npmjs.org/package/fand.map-merge)
+[![NPM Version](https://img.shields.io/npm/v/@fand/map-merge.svg?style=flat-square)](https://www.npmjs.org/package/fand.map-merge)
 [![License](http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](http://fand.mit-license.org/)
 
 ## Installation

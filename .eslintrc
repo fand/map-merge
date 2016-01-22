@@ -13,13 +13,8 @@
   },
 
   "ecmaFeatures" : {
-    "jsx": true,
     "objectLiteralShorthandMethods" : true
   },
-
-  "plugins": [
-    "react"
-  ],
 
   "extends": "eslint:recommended",
 

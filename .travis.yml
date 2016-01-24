@@ -1,9 +1,16 @@
 language: node_js
 sudo: false
 node_js:
-  - "4.1"
+- '4.1'
 cache:
   directories:
-    - node_modules
+  - node_modules
+before_install:
+- npm install -g coveralls
 script:
-  - npm run travis
+- npm run travis
+after_success:
+- coveralls < ./coverage/lcov.info
+env:
+  global:
+    secure: i2oGrVPHnyoFarTtbIhoz7Hot1OOduj10gfGMYq0at86vYu0aTRE6YuY8z9Ryn3leWAML5QCdkftLo9P7OcfEa3I6+MNc7kCEdIW5SvFgpG7G05yjvY6f8p9fxXAoAY6A8EDgQeaQ19/WnR54PC9tDAvdOgE4YWmIMrX+AuYjX5TIZJF/caLg4mvB/jmiX7tl/ycmbKp92t9jL3WEyxtbUEl/1gfK00k3A9OHbn6740kVuVIbBHwzY61+yFcg/dT+jg4cLczS7ULdpUqYKuJJrhspoQ6e8aiXKJYjqkSZ0jXjboKAQVS5lVBmVNifR6cvrEzd49ReYlrISSP96OesgdsMNRrrHuKXlqECVk+/h9oT2O8PnWqzoMb9+75bWT4QGBHbCZgzkWzxXB81e4333olZu7oHIGHNicWpEI/qK5WniH0i1NX2AKimljiUFW+i6JxVODLdWzbOWyHRb0P7h+hkTFUiC9OirL0k5S1uTu6nXSDVJhCx6hEUOtqjUMks0AK9UfP0jZAHUJMVlTirTkS2AikdAS6ZiV6QfT6BJwiEOkFeIW85oVu+tFkdiM0WcEw/tBzPe3uW9C0RQzIxTzdDOQut6eo8+PQnzSYpKQH3ladCSW2VAhqtkz+GoSddKJOddWt2IKqnbAMe8FqgiHWOubbpwL7bpwVMlvru8w=
